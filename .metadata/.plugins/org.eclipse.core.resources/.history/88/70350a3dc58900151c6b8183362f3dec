@@ -20,8 +20,6 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oau
 /* ユーザー情報の取得 */
 $user = $connection->get("account/verify_credentials");
 
-require 'dbconnect.php';
-
 ?>
 
 <!DOCTYPE html>

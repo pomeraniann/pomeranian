@@ -63,13 +63,6 @@
   <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　アカウント情報</font></div>
 </div>
 
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap-modal.js"></script>
-<script src="../js/bootstrap-transition.js"></script>
-
-
 
 </body>
 </html>
