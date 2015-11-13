@@ -1,10 +1,10 @@
 <?php
-
+ 
 /* sessionsをクリア */
 session_start();
 session_destroy();
-
+  
 /* connect.phpへリダイレクト */
-header('Location: ./connect.php');
+header('Location: http://smartboard.webcrow.jp/src/connect.php');
 
 ?>

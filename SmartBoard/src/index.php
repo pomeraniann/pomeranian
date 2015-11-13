@@ -30,5 +30,3 @@ $user = $connection->get("account/verify_credentials");
 <?php echo $user->status->text;?>
 </div>
 </div>
-
-?>

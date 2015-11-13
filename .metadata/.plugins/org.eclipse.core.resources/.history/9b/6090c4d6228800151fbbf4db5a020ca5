@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/all.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<title>SmartBoard ログイン</title>
+</head>
+<body>
+
+<!-- ヘッダー赤 -->
+<div id="header1">
+  <a href="top.html"><img src="../img/logo.png" height="45px" style="vertical-align: middle"></a>
+</div>
+
+<!-- ヘッダー黒 -->
+<div id="header2">
+  <font color="#ffffff" size="2px">　　-SmartPhone Game Application Community-</font>
+</div>
+
+<div id="login-box">
+  <div style="width:100%; height:25px; background-color: #fe0000;">
+  	<font color="white">　ログイン（Twitterと連携する）</font>
+  </div><br><br>
+  <div style="text-align: center; margin-left: auto; margin-right: auto;">
+  <p>SmartBoardにTwitterアカウントの利用を許可しますか？</p><br><br>
+  <table>
+  <tr><td><input type="text" id="login-id" name="login-id" value="TwitterIDまたはメールアドレス"></td></tr>
+  <tr><td><input type="text" id="password" name="password" value="パスワード"></td></tr>
+  </table><br>
+  <button>アプリの認証（仮）</button>
+  </div>
+  <br><br><br><br><br><br>
+  <a href="https://twitter.com/account/begin_password_reset" target="_blank" style="margin-left:10px;">パスワードを忘れた方はこちら</a>
+  <a href="https://twitter.com/signup" target="_blank" style="float: right; margin-right:10px;">Twitterへの登録</a>
+</div>
+
+</body>
+</html>
