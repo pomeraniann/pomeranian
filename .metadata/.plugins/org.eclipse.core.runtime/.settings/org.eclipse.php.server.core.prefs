@@ -1,3 +1,7 @@
 defaultPHPServer=Default PHP Web Server
 eclipse.preferences.version=1
+<<<<<<< Updated upstream
 phpServers=<server><name>Default PHP Web Server</name><base_url>http\://localhost</base_url><hostname>localhost</hostname><document_root></document_root></server>
+=======
+phpServers=<server><hostname>localhost</hostname><debuggerId>org.eclipse.php.debug.core.noneDebugger</debuggerId><document_root></document_root><name>Default PHP Web Server</name><base_url>http\://localhost</base_url><id>php-server-59fe7034-6b02-4f6a-8dba-07aff6a04b05</id></server>
+>>>>>>> Stashed changes

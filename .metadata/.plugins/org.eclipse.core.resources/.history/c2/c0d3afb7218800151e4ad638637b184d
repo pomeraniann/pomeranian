@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/all.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<title>SmartBoard トップ</title>
+</head>
+<body>
+
+<!-- ヘッダー赤 -->
+<div id="header1">
+  <a href="top.html"><img src="../img/logo.png" height="45px" style="vertical-align: middle"></a>
+  <input type="text" id="search-box" name="searchword" value="ゲームの検索">
+  <div id="loginicon">
+ 	<img src="../img/twitter.png" width="40px" style="vertical-align: middle">
+ 	<font color="#ffffff" size="2px"><span style="vertical-align: bottom;">
+ 	<a href="login.html">　ログイン</a></span></font>
+ </div>
+</div>
+
+<!-- ヘッダー黒 -->
+<div id="header2">
+  <font color="#ffffff" size="2px">　　-SmartPhone Game Application Community-</font>
+</div>
+
+<div id="sub-box">
+  <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　ジャンル</font></div>
+  <table id="kind">
+  <tr><td>すべて</td></tr>
+  <tr><td>ロールプレイング</td>
+  <tr><td>パズル</td></tr>
+  <tr><td>カジノ</td></tr>
+  <tr><td>アクション</td></tr>
+  <tr><td>カード</td></tr>
+  <tr><td>アドベンチャー</td></tr>
+  <tr><td>シュミレーション</td></tr>
+  <tr><td>スポーツ</td></tr>
+  <tr><td>音楽</td></tr>
+  <tr><td>アーケード</td></tr>
+  <tr><td>ボード</td></tr>
+  <tr><td>レース</td></tr>
+  <tr><td>その他</td></tr>
+  </table>
+</div>
+
+<div id="main-box">
+  <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　ゲーム一覧</font></div>
+  <a href="list.html">遷移テスト（グループ一覧画面）</a>
+  
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Modal起動</a>
+ 
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">モーダルボックス</h3>
+  </div>
+  <div class="modal-body">
+    <p>モーダルボックスの中身です。</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">閉じる</button>
+    <button class="btn btn-primary">完了</button>
+  </div>
+</div>
+
+
+</div>
+
+<div id="account-box">
+  <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　アカウント情報</font></div>
+</div>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="../bootstrap.min.js"></script>
+<script src="../jquery.min.js"></script>
+<script src="../bootstrap-modal.js"></script>
+<script src="../bootstrap-transition.js"></script>
+
+</body>
+</html>
