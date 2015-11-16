@@ -1,0 +1,10 @@
+<?php
+// mysqliクラスのオブジェクトを作成
+$mysqli = new mysqli('Host or IP', 'User', 'Pass', 'DBName');
+if ($mysqli->connect_error) {
+    echo $mysqli->connect_error;
+    exit();
+} else {
+    $mysqli->set_charset("utf8");
+}
+?>

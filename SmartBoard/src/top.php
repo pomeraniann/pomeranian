@@ -20,7 +20,13 @@
 // /* ユーザー情報の取得 */
 // $user = $connection->get("account/verify_credentials");
 
+<<<<<<< HEAD
 // ?>
+=======
+require 'dbconnect.php';
+
+?>
+>>>>>>> origin/master
 
 <!DOCTYPE html>
 <html>
