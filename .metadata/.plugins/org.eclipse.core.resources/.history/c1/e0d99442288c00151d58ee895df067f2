@@ -32,6 +32,6 @@ unset($_SESSION['oauth_token']);
 unset($_SESSION['oauth_token_secret']);
  
 /* top.phpへリダイレクト */
-header('Location: l_top.php');
+header('Location: top.php');
 
 ?>

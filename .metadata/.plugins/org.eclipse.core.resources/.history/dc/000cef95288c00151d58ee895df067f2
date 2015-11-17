@@ -20,7 +20,7 @@
 // /* ユーザー情報の取得 */
 // $user = $connection->get("account/verify_credentials");
 
-?>
+<<< HEAD
 
 
 <!DOCTYPE html>
@@ -79,6 +79,7 @@
 
 </div>
 </div>
+
 
 </body>
 </html>
