@@ -1,0 +1,129 @@
+<?php
+/******************************
+
+	設定項目
+
+******************************/
+
+	// [API Key]と[API Secret]
+	$api_key = 'PTn6fVX7wKvUDABkec5M0QKlK' ;
+	$api_secret = 'TeZbftHWUXvWoyHEKyIotVeNSLovgazCbRkZ8MikzPJ8yO3MuW' ;
+
+	// Callback URL
+	// * 自動的にこのプログラムのURLが指定されるようにしていますが、もし不具合がある場合は、直接、URLを指定して下さい。
+	// * 例 ) $callback_url = 'https://syncer.jp/get-access-token.php' ;
+	$callback_url = ( !isset($_SERVER['HTTPS']) || empty($_SERVER['HTTPS']) ? 'http://' : 'https://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ;
+	
+	/*** [手順1] リクエストトークンの取得 ***/
+	
+	// [アクセストークンシークレット] (まだ存在しないので「なし」)
+	$access_token_secret = '' ;
+	
+	// エンドポイントURL
+	$request_url = 'https://api.twitter.com/oauth/request_token' ;
+	
+	// リクエストメソッド
+	$request_method = 'POST' ;
+	
+	// キーを作成する (URLエンコードする)
+	$signature_key = rawurlencode( $api_secret ) . '&' . rawurlencode( $access_token_secret ) ;
+	
+	// パラメータ([oauth_signature]を除く)を連想配列で指定
+	$params = array(
+			'oauth_callback' => $callback_url ,
+			'oauth_consumer_key' => $api_key ,
+			'oauth_signature_method' => 'HMAC-SHA1' ,
+			'oauth_timestamp' => time() ,
+			'oauth_nonce' => microtime() ,
+			'oauth_version' => '1.0' ,
+	) ;
+	
+	// 各パラメータをURLエンコードする
+	foreach( $params as $key => $value )
+	{
+		// コールバックURLだけはここでエンコードしちゃダメ(よ〜、ダメダメ)
+		if( $key == 'oauth_callback' )
+		{
+			continue ;
+		}
+	
+		// URLエンコード処理
+		$params[ $key ] = rawurlencode( $value ) ;
+	}
+	
+	// 連想配列をアルファベット順に並び替える
+	ksort( $params ) ;
+	
+	// パラメータの連想配列を[キー=値&キー=値...]の文字列に変換する
+	$request_params = http_build_query( $params , '' , '&' ) ;
+	
+	// 変換した文字列をURLエンコードする
+	$request_params = rawurlencode( $request_params ) ;
+	
+	// リクエストメソッドをURLエンコードする
+	$encoded_request_method = rawurlencode( $request_method ) ;
+	
+	// リクエストURLをURLエンコードする
+	$encoded_request_url = rawurlencode( $request_url ) ;
+	
+	// リクエストメソッド、リクエストURL、パラメータを[&]で繋ぐ
+	$signature_data = $encoded_request_method . '&' . $encoded_request_url . '&' . $request_params ;
+?>	
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/all.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<title>SmartBoard トップ</title>
+</head>
+<body>
+
+<!-- ヘッダー赤 -->
+<div id="header1">
+  <a href="top.html"><img src="../img/logo.png" height="45px" style="vertical-align: middle"></a>
+  <input type="text" id="search-box" name="searchword" value="ゲームの検索">
+  <div id="loginicon">
+ 	<img src="../img/twitter.png" width="40px" style="vertical-align: middle">
+ 	<font color="#ffffff" size="2px"><span style="vertical-align: bottom;">
+ 	<a href="http://smartboard-p.sakura.ne.jp/src/redirect.php">ログアウト</a></span></font>
+ </div>
+</div>
+
+<!-- ヘッダー黒 -->
+<div id="header2">
+  <font color="#ffffff" size="2px">　　-SmartPhone Game Application Community-</font>
+</div>
+
+<div id="sub-box">
+  <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　ジャンル</font></div>
+  <table id="kind">
+  <tr><td>すべて</td></tr>
+  <tr><td>ロールプレイング</td>
+  <tr><td>パズル</td></tr>
+  <tr><td>カジノ</td></tr>
+  <tr><td>アクション</td></tr>
+  <tr><td>カード</td></tr>
+  <tr><td>アドベンチャー</td></tr>
+  <tr><td>シュミレーション</td></tr>
+  <tr><td>スポーツ</td></tr>
+  <tr><td>音楽</td></tr>
+  <tr><td>アーケード</td></tr>
+  <tr><td>ボード</td></tr>
+  <tr><td>レース</td></tr>
+  <tr><td>その他</td></tr>
+  </table>
+</div>
+
+<div id="main-box">
+  <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　ゲーム一覧</font></div>
+  <a href="list.html">遷移テスト（グループ一覧画面）</a>
+</div>
+
+<div id="account-box">
+  <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　アカウント情報</font></div>
+　
+</div>
+
+</body>
+</html>
