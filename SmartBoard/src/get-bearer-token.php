@@ -6,8 +6,8 @@
 **************************************************/
 
 	// 設定項目
-	$api_key = '' ;		// APIキー
-	$api_secret = '' ;		// APIシークレット
+	$api_key = 'PTn6fVX7wKvUDABkec5M0QKlK' ;		// APIキー
+	$api_secret = 'TeZbftHWUXvWoyHEKyIotVeNSLovgazCbRkZ8MikzPJ8yO3MuW' ;		// APIシークレット
 
 	// クレデンシャルを作成
 	$credential = base64_encode( $api_key . ':' . $api_secret ) ;
@@ -86,59 +86,4 @@
 	$html .= 	'<h3>レスポンスヘッダー</h3>' ;
 	$html .= 	'<p><textarea rows="8">' . $header . '</textarea></p>' ;
 
-?><!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="robots" content="noindex,nofollow">
-
-		<!-- ビューポートの設定 -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>Twitter APIで、ベアラートークンを取得するサンプルデモ</title><!-- 
-
-/********************************************************************************
-
-	SYNCER 〜 知識、感動をみんなと同期(Sync)するブログ
-
-	* 配布場所
-	https://syncer.jp/twitter-api-matome
-
-	* 動作確認
-	https://syncer.jp/twitter-api-matome/demo/get-bearer-token.php
-
-	* 最終更新日時
-	2015/08/08 17:50
-
-	* 作者
-	あらゆ
-
-	** 連絡先
-	Twitter: https://twitter.com/arayutw
-	Facebook: https://www.facebook.com/arayutw
-	Google+: https://plus.google.com/114918692417332410369/
-	E-mail: info@syncer.jp
-
-	※ バグ、不具合の報告、提案、ご要望など、お待ちしております。
-	※ 申し訳ありませんが、ご利用者様、個々の環境における問題はサポートしていません。
-
-********************************************************************************/
-
-		-->
-	</head>
-<body>
-
-
-
-<?php echo $html ?>
-
-
-<p style="text-align:center"><a href="https://syncer.jp/twitter-api-matome">配布元: Syncer</a></p>
-
-
-
-
-
-
-</body>
-</html>
+?>

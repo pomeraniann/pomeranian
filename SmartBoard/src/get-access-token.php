@@ -6,8 +6,8 @@
 **************************************************/
 
 	// 設定項目
-	$api_key = '' ;		// APIキー
-	$api_secret = '' ;		// APIシークレット
+	$api_key = 'PTn6fVX7wKvUDABkec5M0QKlK' ;		// APIキー
+	$api_secret = 'TeZbftHWUXvWoyHEKyIotVeNSLovgazCbRkZ8MikzPJ8yO3MuW' ;		// APIシークレット
 
 	// Callback URL
 	// * 自動的にこのプログラムのURLが指定されるようにしていますが、もし不具合がある場合は、直接、URLを指定して下さい。
@@ -389,59 +389,4 @@
 	$html .= '<h2 style="color:red">アプリケーション連携の解除</h2>' ;
 	$html .= '<p>このアプリケーションとの連携を解除するには、下記ページより、行なって下さい。</p>' ;
 	$html .= '<p><a href="https://twitter.com/settings/applications" target="_blank">https://twitter.com/settings/applications</a></p>' ;
-?><!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="robots" content="noindex,nofollow">
-
-		<!-- ビューポートの設定 -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>Twitter APIで、アクセストークンを取得するサンプルデモ</title><!-- 
-
-/********************************************************************************
-
-	SYNCER 〜 知識、感動をみんなと同期(Sync)するブログ
-
-	* 配布場所
-	https://syncer.jp/twitter-api-matome
-
-	* 動作確認
-	https://syncer.jp/twitter-api-matome/demo/get-access-token.php
-
-	* 最終更新日時
-	2015/08/10 13:44
-
-	* 作者
-	あらゆ
-
-	** 連絡先
-	Twitter: https://twitter.com/arayutw
-	Facebook: https://www.facebook.com/arayutw
-	Google+: https://plus.google.com/114918692417332410369/
-	E-mail: info@syncer.jp
-
-	※ バグ、不具合の報告、提案、ご要望など、お待ちしております。
-	※ 申し訳ありませんが、ご利用者様、個々の環境における問題はサポートしていません。
-
-********************************************************************************/
-
-		-->
-	</head>
-<body>
-
-
-
-<?php echo $html ?>
-
-
-<p style="text-align:center"><a href="https://syncer.jp/twitter-api-matome">配布元: Syncer</a></p>
-
-
-
-
-
-
-</body>
-</html>
+?>
