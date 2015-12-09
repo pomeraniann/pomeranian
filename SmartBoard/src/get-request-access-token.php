@@ -8,16 +8,16 @@
 **************************************************/
 
 	// 設定
-	$api_key = '' ;		// APIキー
-	$api_secret = '' ;		// APIシークレット
-	$access_token = '' ;		// アクセストークン
-	$access_token_secret = '' ;		// アクセストークンシークレット
+	$api_key = 'PTn6fVX7wKvUDABkec5M0QKlK' ;		// APIキー
+	$api_secret = 'TeZbftHWUXvWoyHEKyIotVeNSLovgazCbRkZ8MikzPJ8yO3MuW' ;		// APIシークレット
+	$access_token = '4065722413-LDfrH9CoQMhVYDyoAKT9At3fkbYjbsrAL4bzdnq' ;		// アクセストークン
+	$access_token_secret = 'jyCBwAGg2DqoPGmlq6Y71pT7FeYSxb0IhIzsWHP7FtZz3' ;		// アクセストークンシークレット
 	$request_url = 'https://api.twitter.com/1.1/statuses/user_timeline.json' ;		// エンドポイント
 	$request_method = 'GET' ;
 
 	// パラメータA (リクエストのオプション)
 	$params_a = array(
-		'screen_name' => '@arayutw' ,
+		'screen_name' => '@monyu0203' ,
 		'count' => 10 ,
 	) ;
 
@@ -118,7 +118,8 @@
 	// $json = @file_get_contents( $request_url , false , stream_context_create( $context ) ) ;
 
 	// JSONをオブジェクトに変換
-	$obj = json_decode( $json ) ;
+	$obj = json_decode( $json,false ) ;
+	$array = json_decode( $json,true ) ;
 
 	// HTML用
 	$html = '' ;
@@ -143,7 +144,14 @@
 	$html .= '<p>このアプリケーションとの連携を解除するには、下記ページより、行なって下さい。</p>' ;
 	$html .= '<p><a href="https://twitter.com/settings/applications" target="_blank">https://twitter.com/settings/applications</a></p>' ;
 
-?><!DOCTYPE html>
+	$html .= $array[""][0]["user"][2]["name"] ;
+	function disp_tweet($value, $text){
+	$users = $connection->get('users/show', $users_params);
+	$screen_name = $value->user->screen_name;
+	echo '<div class="meta"><a target="_blank" href="' . $url . '">' . $updated . '</a>' . '<br>@' . $screen_name .'</div>' . PHP_EOL;
+	}
+	?>
+	<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -152,50 +160,10 @@
 		<!-- ビューポートの設定 -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Twitter APIで、アクセストークンでGETメソッドのリクエストをするサンプルデモ</title><!-- 
+		<title>Twitter APIで、アクセストークンでGETメソッドのリクエストをするサンプルデモ</title>
 
-/********************************************************************************
-
-	SYNCER 〜 知識、感動をみんなと同期(Sync)するブログ
-
-	* 配布場所
-	https://syncer.jp/twitter-api-matome
-
-	* 動作確認
-	https://syncer.jp/twitter-api-matome/demo/get-request-access-token.php
-
-	* 最終更新日時
-	2015/08/09 02:45
-
-	* 作者
-	あらゆ
-
-	** 連絡先
-	Twitter: https://twitter.com/arayutw
-	Facebook: https://www.facebook.com/arayutw
-	Google+: https://plus.google.com/114918692417332410369/
-	E-mail: info@syncer.jp
-
-	※ バグ、不具合の報告、提案、ご要望など、お待ちしております。
-	※ 申し訳ありませんが、ご利用者様、個々の環境における問題はサポートしていません。
-
-********************************************************************************/
-
-		-->
 	</head>
 <body>
-
-
-
 <?php echo $html ?>
-
-
-<p style="text-align:center"><a href="https://syncer.jp/twitter-api-matome">配布元: Syncer</a></p>
-
-
-
-
-
-
 </body>
 </html>

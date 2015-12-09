@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php 
+
+require 'get-access-token.php';
+require 'get-request-access-token.php';
+?>
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -15,7 +20,7 @@
   <div id="loginicon">
  	<img src="../img/twitter.png" width="40px" style="vertical-align: middle">
  	<font color="#ffffff" size="2px"><span style="vertical-align: bottom;">
- 	<a href="http://smartboard-p.sakura.ne.jp/src/redirect.php">ログアウト</a></span></font>
+ 	<a href="http://smartboard-r.sakura.ne.jp/src/redirect.php">ログアウト</a></span></font>
  </div>
 </div>
 
@@ -51,7 +56,11 @@
 
 <div id="account-box">
   <div style="width:100%;height:25px;background-color:#fe0000;"><font color="#ffffff">　アカウント情報</font></div>
-　
+<?php 
+
+echo $screen_name
+
+?>
 </div>
 
 </body>

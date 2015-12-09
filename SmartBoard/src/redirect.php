@@ -12,8 +12,10 @@
 	// Callback URL
 	// * 自動的にこのプログラムのURLが指定されるようにしていますが、もし不具合がある場合は、直接、URLを指定して下さい。
 	// * 例 ) $callback_url = 'https://syncer.jp/get-access-token.php' ;
-	$callback_url = ( !isset($_SERVER['HTTPS']) || empty($_SERVER['HTTPS']) ? 'http://' : 'https://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ;
-
+	//$callback_url = ( !isset($_SERVER['HTTPS']) || empty($_SERVER['HTTPS']) ? 'http://' : 'https://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ;
+	$callback_url = 'http://smartboard-r.sakura.ne.jp/src/l_top.php' ;
+	
+	
 	/*** [手順1] リクエストトークンの取得 ***/
 
 	// [アクセストークンシークレット] (まだ存在しないので「なし」)
